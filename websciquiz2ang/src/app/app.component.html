@@ -1,0 +1,19 @@
+<div>
+  <h1>Covid Tracker</h1>
+  <label>Country</label>
+  <select (change)="getCountry($event.target.value)">
+    <option *ngFor="let country of countries" value={{country.Slug}}>
+      {{country.Country}}
+    </option>
+  </select>
+  <button (click)="getData()" >Get Coronavirus Case Information</button>
+  <div *ngIf = "databool; else nodata" class="container">
+    <h1 class="col-lg-12" style="text-align: center;">As of {{currentTime}} <span class="col-lg-12" style="text-align: center;">There are:</span></h1>
+    <h1 class="col-lg-6">Total Confirmed Cases: {{confirmed}}</h1>
+    <h1 class="col-lg-6">Total Recovered Cases: {{recovered}}</h1>
+    <h1 class="col-lg-6">Total Deaths: {{deaths}}</h1>
+  </div>
+  <ng-template #nodata>
+    <h1>No Data to Display for this Country!</h1>
+  </ng-template>
+</div>
