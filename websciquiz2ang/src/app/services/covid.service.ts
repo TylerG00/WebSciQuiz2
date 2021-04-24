@@ -9,8 +9,7 @@ export class CovidService {
   constructor(private http:HttpClient) { }
 
   getCountries():Observable<any>{
-    const url = "https://api.covid19api.com/countries";
-    return this.http.get<any>(url)
+    return this.http.get("/countries");
 
 
   }

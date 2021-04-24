@@ -1,0 +1,9 @@
+h3{
+    background-color: skyblue;
+    margin: 0;
+    padding: 15px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
