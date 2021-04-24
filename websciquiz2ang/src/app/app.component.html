@@ -1,36 +1,38 @@
-<app-header></app-header>
-<div class="container">
-  <div class="row">
-    <div class="col-lg-6 text-right">
-      <mat-form-field>
-        <mat-label>Country</mat-label>
-        <mat-select (selectionChange)="getCountry($event.value)" style="text-align: center;">
-          <mat-option *ngFor="let country of countries" value={{country.Slug}}>
-            {{country.Country}}
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
-    </div>
-
-    <div class="col-lg-6">
-      <button mat-button (click)="getData()" >Get Coronavirus Case Information</button>
-    </div>
-  </div>
-  <mat-card>
-    <mat-card-header>
-      <mat-card-title *ngIf = "databool;"><h1 class="col-lg-12">As of {{currentTime}} <span class="col-lg-12" style="text-align: center;">There are:</span></h1>
-      </mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <div *ngIf = "databool; else nodata" class="container">
-          <h1 class="col-lg-6">Total Confirmed Cases: {{confirmed}}</h1>
-          <h1 class="col-lg-6">Total Recovered Cases: {{recovered}}</h1>
-          <h1 class="col-lg-6">Total Deaths: {{deaths}}</h1>
+<div class="everything">
+  <app-header></app-header>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 text-right">
+        <mat-form-field>
+          <mat-label>Country</mat-label>
+          <mat-select (selectionChange)="getCountry($event.value)" style="text-align: center;">
+            <mat-option *ngFor="let country of countries" value={{country.Slug}}>
+              {{country.Country}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
       </div>
-    </mat-card-content>
-  </mat-card>
-  <ng-template #nodata>
-    <h1>No Data to Display for this Country!</h1>
-  </ng-template>
+
+      <div class="col-lg-6">
+        <button mat-button (click)="getData()" >Get Coronavirus Case Information</button>
+      </div>
+    </div>
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title *ngIf = "databool;"><h1 class="col-lg-12">As of {{currentTime}} <span class="col-lg-12" style="text-align: center;">There are:</span></h1>
+        </mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div *ngIf = "databool; else nodata" class="container">
+            <h1 class="col-lg-6">Total Confirmed Cases: {{confirmed}}</h1>
+            <h1 class="col-lg-6">Total Recovered Cases: {{recovered}}</h1>
+            <h1 class="col-lg-6">Total Deaths: {{deaths}}</h1>
+        </div>
+      </mat-card-content>
+    </mat-card>
+    <ng-template #nodata>
+      <h1>No Data to Display for this Country!</h1>
+    </ng-template>
+  </div>
 </div>
 <app-footer></app-footer>

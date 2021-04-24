@@ -1,0 +1,7 @@
+/* Tried to add background color but didnt know how to do the whole page */
+:host{
+    background-color: lightgoldenrodyellow;
+}
+mat-card{
+    background-color: lightcoral;
+}
