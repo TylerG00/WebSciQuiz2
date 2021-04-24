@@ -13,7 +13,8 @@ export class CovidService {
 
 
   }
-
+//Tried to make an endpoint for this to connect to the backend, but it was confusing on how to pass the country 
+//to the backend that is taken from the form input
   getCovidData(country:string):Observable<any>{
     console.log(country);
     const url = "https://api.covid19api.com/total/dayone/country/" + country;

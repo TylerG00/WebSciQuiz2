@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\ktm65\Documents\GitHub\WebSciQuiz2\websciquiz2ang\src\polyfills.ts */"hN/g");
+module.exports = __webpack_require__(/*! /Users/tylergreen/Library/Mobile Documents/com~apple~CloudDocs/RPI Work/Web Science/WebSciQuiz2/websciquiz2ang/src/polyfills.ts */"hN/g");
 
 
 /***/ }),
